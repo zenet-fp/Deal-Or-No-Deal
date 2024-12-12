@@ -53,19 +53,14 @@ class NoughtsCrosses:
     print()
 
     def user_choice(self):
-        # row is the first number
-        # column is the second number
-        #options = ["TL", "TM", "TR" , "ML", "MM", "MR", "BL", "BM", "BR"]
+
         print()
         print(f"These are your positions: {list(self.positions.keys())}")
         print("<-------------------------------------------------------------------------------->")
-        #print(f"These are your positions: {positions.keys()}")
-        #user_row = int(input("\nWhich row would you like to place your piece? (0 - 2) : "))
-        #user_column = int(input("Which column would you like to place your piece? (0 - 2) : "))
 
         while self.player_piece is None:
             self.game_board()
-            #print("<-------------------------------------------------------------------------------->")
+
             user_piece = str((input("Which piece are you using: Noughts or Crosses? (O / X) : "))).upper()
             self.player_piece = user_piece
             break
@@ -74,7 +69,7 @@ class NoughtsCrosses:
         l = True
         while l:
 
-            #print(f"These are your positions: {list(self.positions.keys())}")
+     
 
             user_position = input("Which position would you like to place your piece?: ").upper()
             print("<-------------------------------------------------------------------------------->")
@@ -97,15 +92,7 @@ class NoughtsCrosses:
                 print("An error occurred")
                 self.user_choice()
 
-
-        #if self.board[user_row][user_column] != " ":
-        #    print("\nThere already a piece there!")
-
-        #else:
-        #    self.player_piece = user_piece
-        #    self.board[user_row][user_column] = f"{user_piece}"
-
-
+    
     def ai_choice(self):
 
         ai_row = random.randint(0, 2)
@@ -119,15 +106,7 @@ class NoughtsCrosses:
             self.ai_piece = ai_piece
             self.board[ai_row][ai_column] = f"{ai_piece}"
 
-#winning_combos = [[
-# straight down [0, 1, 2][0]
-# 2nc straight down [0, 1, 2][1]
-# 3rd straight down [0, 1, 2][2]
-# 1st diagonal  [0][0], [1][1], [2][2]
-# 2nd diagonal [2][0], [1][1], [0][2]
 
-#        ]
-#            ]
 
 class DecideWinner(NoughtsCrosses):
     def __init__(self):
@@ -173,17 +152,6 @@ class DecideWinner(NoughtsCrosses):
                     self.game_board()
                     print(f"The AI has beaten the player! ")
 
-
-    #def final_winner(self, piece, player_piece):
-    #    if piece == player_piece:
-    #        self.user_decide == True
-    #        print("The player has won three in a row. ")
-
-    #    else:
-       #     self.ai_decide == True
-       #     print("The AI has won three in a row. ")
-
-       # return True
 
 if __name__ == '__main__':
     x_ = NoughtsCrosses()
