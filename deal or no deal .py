@@ -108,12 +108,3 @@ class DealOrNoDeal:
 if __name__ == '__main__':
     p = DealOrNoDeal()
     p.main()
-
-#for i, k in range(len(self._available_boxes)):
-#    if self._available_boxes[i] or self._available_boxes[k] == "":
-#        continue
-#    else:
-#        last_value = self._available_boxes[i]
-#        last_box = self._available_boxes[k]
-#    print(f"Here is the swapped box: {self._available_boxes[k]}")
-#    print(f"This has a value of: {self._available_boxes[last_value]}")
