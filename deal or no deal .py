@@ -51,9 +51,11 @@ class DealOrNoDeal:
 
                 if user_choice_ <= 0:
                     print("Error, please enter a valid box")
+               
                 elif self._available_boxes[user_choice_] == "GONE":
                     print("Error, this box has been picked")
                     continue
+                
                 else:
                     print(f"\nYou have chosen the box: {user_choice_ }, this has a value of: £{self._available_boxes[user_choice_]}")
                     print("---------------------------------------------------------------------------------------------------------------------------")
@@ -94,6 +96,7 @@ class DealOrNoDeal:
         if configure_deal <= 40:
             print("You can choose to swap your box with the final box. ")
             user_swap = input("Do you want to sawp?: ").lower()
+            
             if user_swap in ["yes", "ye", "ys", "y"]:
                 remaining_box_index = next(i for i, value in enumerate(self._available_boxes) if value != "GONE")
                 last_box_value = self._available_boxes[remaining_box_index]
