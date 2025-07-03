@@ -12,6 +12,6 @@ Randomly assigned case values each game
 
 Interactive prompts for selecting and eliminating cases
 
-Dynamic Banker offers based on remaining case values
+Banker offers based on random module
 
 Option to accept or reject the deal at each stage
